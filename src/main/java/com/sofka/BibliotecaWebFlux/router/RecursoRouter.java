@@ -15,6 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class RecursoRouter {
 
+    //Para que los Tests funcionen se debe de comentar las rutas que no correspondan al Test
     @Bean
     public RouterFunction<ServerResponse> createQuestion(UseCaseCrear useCaseCrear){
         return route(POST("/añadir").and(accept(MediaType.APPLICATION_JSON)),
